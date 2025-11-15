@@ -528,6 +528,12 @@ class SimpleResNet1D(nn.Module):
     
     def forward(self, x):
         # 入力: (batch_size, 3000)
+        
+        # 前処理（GitHubのコードと同じ）: スケーリング + ログ変換
+        scale_factor = 2.5e24
+        x = x * scale_factor
+        x = torch.log(x.clamp(min=1e-30))
+        
         x = x.unsqueeze(1)  # (batch_size, 1, 3000)
         
         # 初期畳み込み
