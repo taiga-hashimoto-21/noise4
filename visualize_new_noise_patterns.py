@@ -86,7 +86,7 @@ axes[0].grid(True, alpha=0.3)
 axes[1].plot(original_psd.numpy(), label='元データ', color='black', alpha=0.5, linewidth=2)
 axes[1].plot(frequency_band_psd.numpy(), label='周波数帯域集中ノイズ付与後', color='blue', linewidth=2.5)
 axes[1].axvspan(noise_start, noise_end, alpha=0.2, color='red', label='ノイズ付与領域')
-axes[1].set_title('パターン1：周波数帯域集中ノイズ\n電源ノイズ、共振、クロストークを模擬', 
+axes[1].set_title('パターン1：周波数帯域集中ノイズ（電源ノイズ、共振、クロストークを模擬）', 
                   fontsize=16, fontweight='bold')
 axes[1].set_xlabel('周波数ポイント', fontsize=14)
 axes[1].set_ylabel('PSD値', fontsize=14)
@@ -98,7 +98,7 @@ axes[1].grid(True, alpha=0.3)
 axes[2].plot(original_psd.numpy(), label='元データ', color='black', alpha=0.5, linewidth=2)
 axes[2].plot(localized_spike_psd.numpy(), label='局所スパイクノイズ付与後', color='green', linewidth=2.5)
 axes[2].axvspan(noise_start, noise_end, alpha=0.2, color='red', label='ノイズ付与領域')
-axes[2].set_title('パターン2：局所スパイクノイズ\n電磁干渉（EMI）、静電気放電（ESD）、接触不良を模擬', 
+axes[2].set_title('パターン2：局所スパイクノイズ（電磁干渉（EMI）、静電気放電（ESD）、接触不良を模擬）', 
                   fontsize=16, fontweight='bold')
 axes[2].set_xlabel('周波数ポイント', fontsize=14)
 axes[2].set_ylabel('PSD値', fontsize=14)
@@ -110,7 +110,7 @@ axes[2].grid(True, alpha=0.3)
 axes[3].plot(original_psd.numpy(), label='元データ', color='black', alpha=0.5, linewidth=2)
 axes[3].plot(amplitude_dependent_psd.numpy(), label='振幅依存ノイズ付与後', color='red', linewidth=2.5)
 axes[3].axvspan(noise_start, noise_end, alpha=0.2, color='red', label='ノイズ付与領域')
-axes[3].set_title('パターン3：振幅依存ノイズ\n非線形増幅器の歪み、ADCの量子化ノイズ、飽和を模擬', 
+axes[3].set_title('パターン3：振幅依存ノイズ（非線形増幅器の歪み、ADCの量子化ノイズ、飽和を模擬）', 
                   fontsize=16, fontweight='bold')
 axes[3].set_xlabel('周波数ポイント', fontsize=14)
 axes[3].set_ylabel('PSD値', fontsize=14)
